@@ -533,7 +533,7 @@ h3 {
 
 /* footer */
 footer {
-    padding-block: 24px;
+    padding-block: 48px;
     background-color: #C94844;
 }
 
@@ -553,4 +553,252 @@ footer {
     color: #FCFAFB;
     font-size: 12px;
     font-family: "M PLUS Rounded 1c", serif;
+}
+
+
+@media screen and (max-width:767px) {
+    /* 共通 */
+    .container {
+        padding-inline: 6%;
+    }
+
+    /* header */
+    header {
+        height: 10vh;
+        padding-block: 8px;
+    }
+
+    .navigation {
+        max-width: 767px;
+        height: 10vh;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    nav ul {
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .reserve {
+        display: flex;
+        top: 10vh;
+        right: 0;
+        padding: 8px 6%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 0;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin: 0;
+        writing-mode: horizontal-tb;
+    }
+
+    .reserve img {
+        width: 32px;
+        height: auto;
+        padding-bottom: 0;
+        padding-right: 12px;
+    }
+
+    /* main共通 */
+    section {
+        padding: 100px 80px;
+    }
+
+    .hedding {
+        gap: 16px;
+    }
+
+    .hedding span {
+        font-size: 14px;
+    }
+
+    .hedding span:first-child::after {
+        height: 1px;
+        margin-inline: 8px;
+    }
+
+    /* mainvisual */
+    .mainvisual {
+        height: calc(90vh - 8px);
+        padding-bottom: 80px;
+    }
+
+    .main_copy {
+        left: 8%;
+        bottom: 80px;
+        line-height: 1.7;
+        font-size: 14px;
+        color: #FCFAFB;
+        text-shadow: 1px 1px 8px #706569;
+    }
+
+    .slider img {
+        width: 100%;
+        height: calc(90vh - 8px);
+        border-top-left-radius: 0;
+    }
+
+    h3 {
+        right: 6%;
+        bottom: 80px;
+        font-size: 48px;
+        text-align: end;
+    }
+
+    /* about */
+    #about {
+        max-width: 767px;
+    }
+
+    .about_wrapper {
+        padding-left: 16px;
+    }
+
+    .about_flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .about_flex:nth-child(2) {
+        flex-direction: column;
+        padding-top: 42px;
+    }
+
+    .about_flex img {
+        width: 100%;
+    }
+
+    .textarea {
+        width: 100%;
+    }
+
+    .name {
+        padding-bottom: 12px;
+    }
+
+    .name p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .name p:nth-child(2) {
+        font-size: 24px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .text_tittle {
+        font-size: 24px;
+        padding-bottom: 12px;
+    }
+
+    /* menu */
+    #menu {
+        max-width: 767px;
+    }
+
+    .menu_flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding-left: 16px;
+    }
+
+    .menu_flex img {
+        width: 100%;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    #menu dt {
+        padding-bottom: 8px;
+    }
+
+    #menu dd {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 8px;
+    }
+
+    /* blog */
+    .blog {
+        max-width: 767px;
+    }
+
+    .blog_flex {
+        gap: 24px;
+        padding-left: 16px;
+        padding-bottom: 50px;
+    }
+
+    .blog_wrapper:nth-child(3){
+        display: none;
+    }
+
+    .blog_tittle p {
+        padding-top: 8px;
+        padding-left: 4px;
+        line-height: 1;
+    }
+
+    .blog_tittle p:nth-child(1) {
+        font-size: 14px;
+    }
+
+    .blog_tittle p:nth-child(2) {
+        font-size: 18px;
+    }
+
+    #blog .button {
+        margin-bottom: 80px;
+    }
+
+    /* access */
+    .access {
+        max-width: 767px;
+    }
+
+    .access_flex {
+        flex-direction: column-reverse;
+        gap: 24px;
+        padding-left: 16px;
+        padding-bottom: 60px;
+    }
+
+    .access_flex img {
+        width: 70%;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .button_area {
+        padding-bottom: 160px;
+    }
+
+    .button_area .button {
+        width: 100%;
+        padding: 8px 0;
+    }
+    
+    .contact {
+        top: 65px;
+    }
+
+    /* footer */
+    footer {
+        padding-block: 24px;
+    }
 }
