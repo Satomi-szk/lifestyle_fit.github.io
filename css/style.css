@@ -5,6 +5,10 @@
     font-family: "Klee One", serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100%;
     margin: 0 auto;
@@ -98,7 +102,13 @@ nav a:hover::after {
     padding: 60px 24px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    transition: all .5s;
     z-index: 1;
+}
+
+.reserve:hover{
+    background-color: #dd6e68;
+    transition: all .5s;
 }
 
 h2 {
@@ -115,6 +125,8 @@ h2 {
     writing-mode: vertical-rl;
     font-size: 24px;
 }
+
+
 
 /* main共通 */
 section {
@@ -557,6 +569,7 @@ footer {
 
 
 @media screen and (max-width:767px) {
+
     /* 共通 */
     .container {
         padding-inline: 6%;
@@ -575,11 +588,6 @@ footer {
 
     .logo img {
         width: 50px;
-    }
-
-    nav ul {
-        gap: 20px;
-        font-size: 16px;
     }
 
     .reserve {
@@ -603,6 +611,99 @@ footer {
         height: auto;
         padding-bottom: 0;
         padding-right: 12px;
+    }
+
+    .open nav ul {
+        flex-direction: column;
+        gap: 50px;
+        font-size: 40px;
+        text-align: center;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 30;
+    }
+
+    .open nav a{
+        color: #ffffff;
+    }
+
+    .open nav a::after {
+        background: #ffffff;
+        height: 3px;
+        border-radius: 3px;
+    }
+
+    .toggle_btn {
+        position: relative;
+        content: "";
+        width: 30px;
+        height: 25px;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        z-index: 40;
+    }
+
+    .toggle_btn span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 5px;
+        background-color: #706569;
+        transition: all 0.5s;
+    }
+
+    .toggle_btn span:nth-child(1) {
+        top: 10%;
+        transform: rotate(180deg);
+    }
+
+    .toggle_btn span:nth-child(2) {
+        top: 50%;
+    }
+
+    .toggle_btn span:nth-child(3) {
+        transform: rotate(-180deg);
+        top: 90%;
+    }
+
+    .open .toggle_btn span {
+        background-color: #ffffff;
+        transition: all 0.5s;
+        z-index: 50;
+    }
+
+    .open .toggle_btn span:nth-child(1) {
+        transform: rotate(-225deg);
+        top: 50%;
+    }
+
+    .open .toggle_btn span:nth-child(2) {
+        display: none;
+    }
+
+    .open .toggle_btn span:nth-child(3) {
+        transform: rotate(225deg);
+        top: 50%;
+    }
+
+    .mask {
+        display: none;
+    }
+
+    .open .mask {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(231, 135, 135, 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
     }
 
     /* main共通 */
@@ -630,8 +731,8 @@ footer {
     }
 
     .main_copy {
-        left: 8%;
-        bottom: 80px;
+        left: 6%;
+        top: 72px;
         line-height: 1.7;
         font-size: 14px;
         color: #FCFAFB;
@@ -647,7 +748,8 @@ footer {
     h3 {
         right: 6%;
         bottom: 80px;
-        font-size: 48px;
+        font-size: 42px;
+        line-height: 1;
         text-align: end;
     }
 
@@ -742,7 +844,7 @@ footer {
         padding-bottom: 50px;
     }
 
-    .blog_wrapper:nth-child(3){
+    .blog_wrapper:nth-child(3) {
         display: none;
     }
 
@@ -792,9 +894,9 @@ footer {
         width: 100%;
         padding: 8px 0;
     }
-    
+
     .contact {
-        top: 65px;
+        top: 80px;
     }
 
     /* footer */
