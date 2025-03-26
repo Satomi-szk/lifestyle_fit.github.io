@@ -106,7 +106,7 @@ nav a:hover::after {
     z-index: 1;
 }
 
-.reserve:hover{
+.reserve:hover {
     background-color: #dd6e68;
     transition: all .5s;
 }
@@ -613,20 +613,25 @@ footer {
         padding-right: 12px;
     }
 
+    nav ul {
+        opacity: 0;
+    }
+
     .open nav ul {
         flex-direction: column;
         gap: 50px;
         font-size: 40px;
         text-align: center;
         padding: 0;
+        opacity: 1;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         z-index: 30;
     }
 
-    .open nav a{
+    .open nav a {
         color: #ffffff;
     }
 
